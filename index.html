@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나만의 네이버</title>
+    <title>에이버</title>
+    <!-- 새로운 아이콘 지정 -->
+    <link rel="icon" href="channels4_profile.png" type="image/png">
     <style>
         /* 전체 페이지 스타일 */
         body {
@@ -67,28 +69,44 @@
             color: #ffffff;
         }
 
-        /* 검색 폼 스타일 */
-        .search-form {
+        /* 버튼 및 검색창 스타일 */
+        .search-container {
             text-align: center;
             margin-top: 20px;
         }
-        .search-form input[type="text"] {
-            padding: 10px;
-            border-radius: 5px;
+        .search-container input[type="text"] {
+            padding: 8px;
+            border-radius: 3px;
             border: 1px solid #cccccc;
+            font-size: 16px;
             width: 300px;
         }
-        .search-form input[type="submit"] {
-            padding: 10px 20px;
-            border-radius: 5px;
+        .search-container button {
+            padding: 8px 20px;
+            border-radius: 3px;
             border: none;
             background-color: #03c75a;
             color: #ffffff;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-        .search-form input[type="submit"]:hover {
+        .search-container button:hover {
             background-color: #028a48;
+        }
+
+        /* 광고 스타일 */
+        .advertisement {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px solid #03c75a;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 9999; /* 광고가 다른 요소 위에 표시되도록 설정 */
+            display: none; /* 처음에는 숨김 처리 */
         }
 
         /* 본문 스타일 */
@@ -111,7 +129,7 @@
 <body>
     <!-- 헤더 -->
     <header>
-        <h1>나만의 네이버</h1>
+        <h1>에이버</h1>
         <div class="login-container">
             <a href="#login">로그인</a>
         </div>
@@ -126,7 +144,31 @@
             <li><a href="https://map.naver.com/">지도</a></li>
             <li><a href="https://finance.naver.com/">증권</a></li>
             <li><a href="https://papago.naver.com/">번역</a></li>
-            <li><a href="https://www.youtube.com/">YouTube</a></li>
-            <li><a href="https://store.steampowered.com/">Steam</a></li>
-            <li><a href="https://www.twitch.tv/">Twitch</a></li>
-            <!-- 필요한 추가 내비게이션
+        </ul>
+    </nav>
+
+    <!-- 버튼 및 검색창 -->
+    <div class="search-container">
+        <form action="https://search.naver.com/search.naver" method="GET">
+            <input type="text" id="search-input" name="query" placeholder="검색어를 입력하세요...">
+            <button type="submit" id="search-button">검색</button>
+        </form>
+    </div>
+
+    <!-- 광고 -->
+    <div class="advertisement" id="advertisement">
+        <h2>광고</h2>
+        <p id="advertisement-content"></p>
+    </div>
+
+    <!-- 본문 -->
+    <main>
+        <!-- 여기에 본문 내용을 추가하세요 -->
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+        <p>&copy; 2024 에이버. All rights reserved.</p>
+    </footer>
+</body>
+</html>
