@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 네이버</title>
+    <style>
+        /* 전체 페이지 스타일 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f6f6;
+        }
+
+        /* 헤더 스타일 */
+        header {
+            background-color: #03c75a;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* 로그인/회원가입 스타일 */
+        .login-container {
+            margin-right: 20px;
+        }
+        .login-container a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #028a48;
+            transition: background-color 0.3s ease;
+        }
+        .login-container a:hover {
+            background-color: #025c2e;
+        }
+
+        /* 내비게이션 스타일 */
+        nav {
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #03c75a;
+            color: #ffffff;
+        }
+
+        /* 검색 폼 스타일 */
+        .search-form {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .search-form input[type="text"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+            width: 300px;
+        }
+        .search-form input[type="submit"] {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #03c75a;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .search-form input[type="submit"]:hover {
+            background-color: #028a48;
+        }
+
+        /* 본문 스타일 */
+        main {
+            padding: 20px;
+        }
+
+        /* 푸터 스타일 */
+        footer {
+            background-color: #333333;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <h1>나만의 네이버</h1>
+        <div class="login-container">
+            <a href="#login">로그인</a>
+        </div>
+    </header>
+
+    <!-- 내비게이션 -->
+    <nav>
+        <ul>
+            <li><a href="https://news.naver.com/">뉴스</a></li>
+            <li><a href="https://entertain.naver.com/">연예</a></li>
+            <li><a href="https://sports.news.naver.com/">스포츠</a></li>
+            <li><a href="https://map.naver.com/">지도</a></li>
+            <li><a href="https://finance.naver.com/">증권</a></li>
+            <li><a href="https://papago.naver.com/">번역</a></li>
+            <!-- 필요한 추가 내비게이션 항목을 여기에 추가할 수 있습니다 -->
+        </ul>
+    </nav>
+
+    <!-- 검색 폼 -->
+    <main>
+        <div class="search-form">
+            <form action="https://www.google.com/search" method="GET" target="_blank">
+                <input type="text" name="q" placeholder="검색어를 입력하세요">
+                <input type="submit" value="검색">
+            </form>
+        </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+        <p>&copy; 2024 나만의 네이버. All rights reserved.</p>
+    </footer>
+</body>
+</html>
